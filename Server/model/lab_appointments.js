@@ -1,0 +1,68 @@
+const mongoose = require('mongoose')
+const LabSchema = mongoose.Schema({
+    user_id:{
+        type:String,
+        required:true
+    },
+    lab_id:{
+        type:String,
+        required:true
+    },
+    lab_name:{
+        type:String,
+        required:true
+    },
+    lab_image:{
+        type:String,
+        required:true,
+    },
+    name:{
+        type:String,
+        required:true
+    },
+    email:{
+        type:String,
+        required:true
+    },
+    contact:{
+        type:String,
+        required:true
+    },
+    address:{
+        type:String,
+        required:true
+    },
+    test:{
+        type:String,
+        required:true
+    },
+    app_type:{
+        type:String,
+        required:true
+    },
+    date:{
+        type:String,
+        required:true
+    },
+    time:{
+        type:String,
+        required:true
+    },
+    cost:{
+        type:String,
+        required:true
+    },
+    status:{
+        type:Boolean,
+        required:false,
+        default:false
+    },
+    reportFile:{
+        type:String,
+        required:false,
+        default:null
+    }
+
+})
+
+module.exports = mongoose.model('lab_appointment',LabSchema)
